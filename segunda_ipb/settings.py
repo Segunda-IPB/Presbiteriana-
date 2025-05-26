@@ -75,10 +75,13 @@ WSGI_APPLICATION = 'segunda_ipb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'igreja_db',
+        'USER': 'igreja_user',
+        'PASSWORD': 'igreja_user',
+        'HOST': 'localhost',
+        'PORT': '2023',
+}}
 
 
 # Password validation
