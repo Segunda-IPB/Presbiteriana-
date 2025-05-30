@@ -1,0 +1,50 @@
+<!-- templates/base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Meu Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    {% include '_header.html' %} <!-- Charmando o componente cabeçalho-->
+    <div>
+        <h1>UCP – União Presbiteriana de Crianças</h1>
+        <h4>A União Presbiteriana de Crianças é voltada à formação cristã das crianças até 11 anos de idade. 
+            Trabalha com métodos pedagógicos apropriados à faixa etária, visando ao ensino das verdades bíblicas, 
+            à introdução ao culto e à vida comunitária da igreja, preparando-as para um futuro engajamento consciente na fé</p>
+    </div>
+    <div class="container text-center my-4">
+    <div class="row">
+        <div class="col-md-4">
+        <img src="{% static 'imagens/UCP1.png' %}" class="img-fluid" style="max-width: 250px;">
+        </div>
+        <div class="col-md-4">
+        <img src="{% static 'imagens/UCP2.png' %}" class="img-fluid" style="max-width: 250px;">
+        </div>
+        <div class="col-md-4">
+        <img src="{% static 'imagens/UCP3.png' %}" class="img-fluid" style="max-width: 250px;">
+        </div>
+    </div>
+    </div>
+
+
+    <footer class="rodape">
+        <div class="container3">
+            <div class="logo_instagram">
+                <img class="logo3" src="{% static 'imagens/logo_instagram.png' %}">
+                <p>@Segundaipb.patos</p>
+            </div>
+            <div class="logo_localizacao">
+                <img class="logo3" src="{% static 'imagens/logo_localização.png' %}">
+                <p>Rua João Eudorico, Bivar Olinto, 1019 - Patos/PB</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

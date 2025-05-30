@@ -4,18 +4,50 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #b4e4ac;
+    background-color: #074528;
     color: #333;
 }
 
 header {
-    background-color: #048404;
+    background-color: #074528;
     color: white;
     padding: 1rem;
+
+    display: flex;
+    align-items: center;      /* alinha verticalmente */
+    justify-content: space-between;  /* espaço entre imagem e título/nav */
+    position: relative;
 }
 
 header h1 {
     margin: 0;
+}
+
+.logo1 {
+    width: 150px;     /* ou o tamanho desejado */
+    height: 150px; 
+}
+
+.logo2 {
+    width: 550px;     /* ou o tamanho desejado */
+    height: 350px; 
+}
+
+.logo3 {
+    width: 40px;     /* ou o tamanho desejado */
+    height: 50px; 
+}
+
+.imagem_pastor {
+    width: 300px;     /* ou o tamanho desejado */
+    height: 400px; 
+}
+
+.cabecalho {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    flex-grow: 1;   /* Faz o nav ocupar o resto do espaço */
 }
 
 nav {
@@ -34,7 +66,7 @@ nav a:hover {
 
 main {
     padding: 2rem;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 footer {
@@ -42,4 +74,105 @@ footer {
     padding: 1rem;
     background-color: #e9ecef;
     margin-top: 2rem;
+}
+
+.descricao {
+    color: #000000;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    left: -300px;
+}
+
+.texto {
+    width: 45%;
+}
+
+.carrossel, .texto {
+    width: 48%; /* ou outra largura adequada */
+    padding: 1rem;
+}
+
+.carrossel {
+    text-align: center
+}
+
+.imagemCarrossel {
+    width: 60%;     /* ou o tamanho desejado */
+    height: 100%; 
+    position: relative;
+    top: -5%; /* Ajuste esse valor conforme necessário */
+}
+
+.carousel {
+    min-width: 600px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.carousel img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-inner {
+    min-height: 20px;
+    overflow: hidden;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-between; /* ou center, flex-start, etc. */ 
+}
+
+
+.container2 {
+    display: flex;
+    align-items: center;         /* Alinha verticalmente */
+    justify-content: center;     /* Centraliza os itens horizontalmente (pode mudar para space-between) */
+    gap: 2rem;                   /* Espaço entre imagem e texto */
+    background-color: #074528;
+    height: auto;
+    padding: 2rem;
+    width: 100vw;
+    position: relative;
+    left: -2rem; /* Corrige o padding do <main> */
+}
+
+.container2 h1, p {
+    display: flex;
+    color: rgb(255, 255, 255);
+}
+
+.texto2 {
+    text-align: left;
+}
+
+.rodape {
+    background-color: #074528;
+}
+
+.container3 {
+    display: flex;
+    align-items: center;         /* Alinha verticalmente */
+    justify-content: center;     /* Centraliza os itens horizontalmente (pode mudar para space-between) */
+    gap: 0,5rem;                   /* Espaço entre imagem e texto */
+    background-color: #074528;
+    height: auto;
+    padding: -1rem 1rem;
+    width: 100vw;
+    position: relative;
+    left: -2rem; /* Corrige o padding do <main> */
+}
+
+.logo_instagram {
+    position: relative;
+    right: 3%; /* Ajuste esse valor conforme necessário */
+}
+
+.imagens_uph {
+    width: 300px;     /* ou o tamanho desejado */
+    height: 400px; 
 }
