@@ -1,22 +1,19 @@
-from django.shortcuts import render
 from django.views.generic import TemplateView
 
-
-# Create your views here.
-class Home(TemplateView):
+class HomeView(TemplateView):
     template_name = 'home.html'
 
-def uph_view(request):
-    return render(request, 'uph.html')
+class UPHView(TemplateView):
+    template_name = 'uph.html'
 
-def ump_view(request):
-    return render(request, 'ump.html')
+class UMPView(TemplateView):
+    template_name = 'ump.html'
 
-def saf_view(request):
-    return render(request, 'saf.html')
+class SAFView(TemplateView):
+    template_name = 'saf.html'
 
-def ucp_view(request):
-    return render(request, 'ucp.html')
+class UCPView(TemplateView):
+    template_name = 'ucp.html'
 
-def upa_view(request):
-    return render(request, 'upa.html')
+class UPAView(TemplateView):
+    template_name = 'upa.html'
