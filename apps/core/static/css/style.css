@@ -171,3 +171,224 @@ footer {
     position: relative;
     right: 3%; /* Ajuste esse valor conforme necessário */
 }
+
+.imagens_uph {
+    width: 300px;     /* ou o tamanho desejado */
+    height: 400px; 
+}
+
+/* Adicionar ao final de style.css */
+
+.chat-container {
+    height: 400px;
+    overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+    background-color: #f8f9fa; /* Cor de fundo suave, similar ao Bootstrap */
+    padding: 1rem;
+    border: 1px solid #dee2e6; /* Cor da borda do Bootstrap */
+    border-radius: 0.25rem; /* Raio da borda do Bootstrap */
+    display: flex;
+    flex-direction: column; /* Mensagens empilhadas verticalmente */
+}
+
+.message {
+    margin-bottom: 0.75rem; /* Espaçamento entre mensagens */
+    display: flex; /* Para alinhar balões de mensagem */
+}
+
+.message.sent {
+    justify-content: flex-end; /* Alinha mensagens enviadas à direita */
+}
+
+.message.received {
+    justify-content: flex-start; /* Alinha mensagens recebidas à esquerda */
+}
+
+.message-bubble {
+    display: inline-block;
+    padding: 0.6rem 1rem; /* Preenchimento interno do balão */
+    border-radius: 1.25rem; /* Bordas arredondadas para o balão */
+    max-width: 75%; /* Largura máxima do balão */
+    word-wrap: break-word; /* Quebra de palavras longas */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+.message.sent .message-bubble {
+    background-color: #0d6efd; /* Azul primário do Bootstrap */
+    color: white;
+    text-align: left; /* Alinha o texto dentro do balão à esquerda */
+}
+
+.message.received .message-bubble {
+    background-color: #e9ecef; /* Cinza claro do Bootstrap */
+    color: #212529; /* Cor de texto padrão do Bootstrap */
+    text-align: left;
+}
+
+.message-input-area {
+    margin-top: 1rem;
+}
+
+.message-input-area textarea {
+    resize: none; /* Desabilita o redimensionamento manual da textarea */
+}
+
+/* Adicionar ao final de style.css */
+
+/* Estilos do Calendário */
+.calendar-container {
+    max-width: 900px; /* Largura máxima do calendário */
+    margin: auto; /* Centraliza o calendário */
+    border-radius: 0.375rem; /* Bootstrap card border-radius */
+}
+
+.calendar-table {
+    table-layout: fixed; /* Garante que as colunas tenham larguras iguais */
+}
+
+.calendar-table th,
+.calendar-table td {
+    width: 14.28%; /* 100% / 7 dias */
+    height: 100px;  /* Altura das células, ajuste conforme necessário */
+    vertical-align: top !important;
+    padding: 0.5rem !important;
+}
+
+.calendar-table thead th {
+    font-weight: 600; /* Deixa os nomes dos dias da semana em negrito */
+    background-color: #f8f9fa; /* Cor de fundo clara para o cabeçalho dos dias */
+    border-bottom-width: 2px;
+}
+
+.calendar-table td div.day-number {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    text-align: left; /* Alinha o número do dia à esquerda */
+}
+
+.calendar-table td.today {
+    background-color: #cfe2ff; /* Azul claro (Bootstrap primary-bg-subtle) */
+    font-weight: bold;
+    border: 2px solid #0d6efd !important; /* Borda azul (Bootstrap primary) */
+}
+
+.calendar-table td.other-month .day-number {
+    color: #adb5bd; /* Cinza para dias de outros meses (Bootstrap secondary text color) */
+}
+
+.calendar-table td.other-month {
+    background-color: #f8f9fa; /* Fundo levemente acinzentado para dias de outros meses */
+}
+
+/* Estilos para futuros eventos (apenas como placeholder) */
+.calendar-event {
+    font-size: 0.75em;
+    padding: 3px 5px;
+    margin-top: 3px;
+    background-color: #198754; /* Verde (Bootstrap success color) */
+    color: white;
+    border-radius: 4px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona "..." se o texto do evento for muito longo */
+    cursor: pointer;
+}
+
+.calendar-event:hover {
+    opacity: 0.8;
+}
+
+.bg-custom-green {
+    background-color: #16442e !important; /* Exemplo com o tom de verde do seu header original, ajuste conforme necessário */
+    color: #074528;
+}
+
+/* ===== Melhorias para a Página "Fale Conosco" ===== */
+
+.chat-container {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo para o texto explicativo dentro do chat */
+.message.received .message-bubble.description {
+    background-color: transparent; /* Fundo transparente para o texto explicativo */
+    color: #212529;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    font-size: 1rem;
+    max-width: 100%;
+}
+
+
+.message-bubble {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.message.sent .message-bubble {
+    background-color: #0d6efd;
+    color: #fff;
+    border-top-right-radius: 0;
+}
+
+.message-input-area {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.message-input-area textarea,
+.message-input-area input[type="text"],
+.message-input-area input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+}
+
+.message-input-area button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    background-color: #0d6efd;
+    border: none;
+    color: #fff;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s ease;
+}
+
+.message-input-area button:hover {
+    background-color: #0b5ed7;
+}
+
+/* Centraliza o título e o parágrafo com mais harmonia */
+.container h1,
+.container p {
+    color: #212529;
+    font-weight: 500;
+}
+
+/* Tornar responsivo */
+@media (max-width: 768px) {
+    .chat-container {
+        height: 350px;
+    }
+
+    .message-input-area button {
+        font-size: 0.95rem;
+    }
+}

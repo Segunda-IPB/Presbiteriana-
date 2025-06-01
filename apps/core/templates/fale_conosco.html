@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Fale Conosco{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-2 text-center">Fale Conosco</h1>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="chat-container" id="chatContainer">
+                <div class="message received description">
+                    <div class="message-bubble">
+                        Olá! Como podemos ajudar? Digite sua mensagem abaixo e clique em Enviar.
+                    </div>
+                </div>
+
+                <form method="post" class="message-input-area mt-3">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

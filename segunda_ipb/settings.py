@@ -43,7 +43,7 @@ ROOT_URLCONF = 'segunda_ipb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'core/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -112,3 +112,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = 'login'                  # página de login
+LOGIN_REDIRECT_URL = 'painel-admin' # depois de logar, vai para o painel admin
+LOGOUT_REDIRECT_URL = 'login'       # depois de sair, volta para o login
+
+

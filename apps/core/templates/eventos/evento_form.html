@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}{{ view.object.pk|yesno:"Editar Evento,Novo Evento" }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">{{ view.object.pk|yesno:"Editar Evento,Novo Evento" }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a href="{% url 'evento-list' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

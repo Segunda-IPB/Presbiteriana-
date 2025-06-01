@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow-lg" style="width: 100%; max-width: 400px;">
+        <div class="card-header bg-success text-white text-center">
+            <h4 class="mb-0">Login do Administrador</h4>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

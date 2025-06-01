@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Mensagens Recebidas{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Mensagens de Contato</h1>
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mensagem in mensagens %}
+            <tr>
+                <td>{{ mensagem.nome }}</td>
+                <td>{{ mensagem.email }}</td>
+                <td>
+                    <a href="{% url 'mensagem-detail' mensagem.pk %}" class="btn btn-sm btn-info">Ver</a>
+                    <a href="{% url 'mensagem-update' mensagem.pk %}" class="btn btn-sm btn-warning">Editar</a>
+                    <a href="{% url 'mensagem-delete' mensagem.pk %}" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">Nenhuma mensagem encontrada.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
